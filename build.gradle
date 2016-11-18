@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 'Google Inc.:Google APIs:24'
+    buildToolsVersion '24.0.2'
+
+    defaultConfig {
+        // API 14 android 4.0
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':variable')
+    // floating button
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    // floating button
+    compile 'com.github.clans:fab:1.6.3'
+    // recyclerView 支援下拉 / lazy loading
+    compile 'com.malinskiy:superrecyclerview:1.1.4'
+    // recyclerView 支援下拉 / lazy loading
+    compile 'com.hkm.ui:ultimaterecyclerview:0.5.6'
+    // RecyclerView divider
+    compile 'com.yqritc:recyclerview-flexibledivider:1.2.9'
+    // emojis 表情符號
+    compile 'com.rockerhieu.emojicon:library:1.3.3'
+    // 圓形imageview
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.2.0'
+    // 線圖
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.5'
+    // material edittext
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    // material lib
+    compile('com.weiwangcn.betterspinner:library-material:1.1.0') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.rengwuxian.materialedittext', module: 'library'
+    }
+    compile 'com.android.support:design:23.1.1'
+}
+repositories {
+    jcenter()
+    //UltimateRecyclerView
+    maven { url "http://dl.bintray.com/jjhesk/maven" }
+    //MPAndroidChart
+    maven { url "https://jitpack.io" }
+}

@@ -1,0 +1,242 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:minWidth="280dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mitake_dialog_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:id="@+id/layout_dialog_title_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/mitake_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/custom_dialog_button_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_dialog_title_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/mitake_dialog_title2_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@drawable/custom_dialog_button_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/mitake_dialog_title2_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@drawable/custom_dialog_button_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_dialog_title_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/mitake_dialog_title3_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@drawable/custom_dialog_button_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/mitake_dialog_title3_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@drawable/custom_dialog_button_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/mitake_dialog_title3_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@drawable/custom_dialog_button_color" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sync_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentRight="true">
+            <!--<View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />-->
+            <Button
+                android:id="@+id/sync_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mitake_dialog_context"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="#ffC1C1C1"
+        android:gravity="center"
+        android:minHeight="80dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mitake_dialog_context_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#1a2125" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mitake_dialog_context_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/mitake_dialog_layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_dialog_button_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/dialog_button_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#3e4649"
+            android:singleLine="true"
+            android:text="OK"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@drawable/custom_dialog_button_color" />
+
+        <ImageView
+            android:id="@+id/dialog_button_divider2"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dialog_button_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#3e4649"
+            android:singleLine="true"
+            android:text="OK"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@drawable/custom_dialog_button_color" />
+
+        <ImageView
+            android:id="@+id/dialog_button_divider"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dialog_button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="#376fa9"
+            android:singleLine="true"
+            android:text="cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@drawable/custom_dialog_button_color" />
+    </LinearLayout>
+
+</LinearLayout>
